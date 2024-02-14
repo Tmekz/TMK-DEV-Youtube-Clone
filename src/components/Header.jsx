@@ -7,10 +7,9 @@ const Header = () => {
   // to show the searchbar is fullwidth
   const [showFullWidthSearch, setShowFullWidthSearch] = useState(false);
 
-  console.log(showFullWidthSearch);
   return (
     <div className="flex gap-10 lg:gap-20 justify-between items-center mx-4 pt-2 mb-6">
-      {/* First div with menu button + logo youtube */}
+      {/* First div with menu button + logo youtube. If showfullwidthsearch is true, div has to be hidden */}
       <div
         className={`flex gap-4 shrink-0 items-center ${
           showFullWidthSearch ? "hidden" : "flex"
@@ -19,12 +18,13 @@ const Header = () => {
         <Button variant="ghost" size="icon">
           <Menu />
         </Button>
+        
         <a href={"/"}>
           <img src={logo} alt="Logo youtube" className="h-6" />
         </a>
       </div>
 
-      {/* searchbar in between, smaller than md screen has to be hidden*/}
+      {/* second div in the middle = searchbar in between, smaller than md screen has to be hidden*/}
       <form
         className={`gap-4 flex-grow justify-center ${
           showFullWidthSearch ? "flex" : "hidden md:flex"
@@ -57,7 +57,7 @@ const Header = () => {
         </Button>
       </form>
 
-      {/* Last div with 3 icons md+ screen and 5 icons less than md screen. If search is clicked then the div has to be hidden */}
+      {/* Last div on the right when larger than MD screen has 3 icons, when smaller has 5 icons. If search is clicked then the div has to be hidden */}
       <div
         className={`flex shrink-0 md:gap-2 items-center ${
           showFullWidthSearch ? "hidden" : "flex"

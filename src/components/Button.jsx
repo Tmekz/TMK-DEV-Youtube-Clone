@@ -35,13 +35,15 @@ export const buttonStyles = cva(["transition-colors"], {
 const Button = ({ variant, size, className, ...props }) => {
   return (
     <button
-      {...props}
       //   twMerge allow us to use prestyled class + normal classname. Depends on the order we can choose wich one overide the other one
+      // !!!! THE ORDER IS IMPORTANT !!!!
       className={twMerge(buttonStyles({ variant, size }), className)}
+      // in this scenario we want our custom classname to overide the button style so we write "twMerge(buttonStyles({ variant, size })" first then we put className"
+
+      // we could choose to do the reverse but we would have to write className={className, twMerge(buttonStyles({ variant, size }) }
+      {...props}
     />
   );
 };
 
 export default Button;
-
-

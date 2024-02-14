@@ -1,19 +1,19 @@
-export const categories = [
+export const filtersList = [
   "All",
-  "JavaScript",
+  "React",
+  "TailwindCSS",
+  "NodeJS",
+  "World of Warcraft",
+  "MT-10",
   "TypeScript",
   "Programming",
-  "Weight Lifting",
-  "Bowling",
-  "Hiking",
-  "React",
-  "Next.js",
-  "Functional Programming",
-  "Object Oriented Programming",
-  "Frontend Web Development",
-  "Backend Web Development",
-  "Web Development",
   "Coding",
+  "Gym",
+  "Next.js",
+  "Deep learning",
+  "Frontend",
+  "Backend",
+  "Web Development",
 ];
 
 export const videos = [
