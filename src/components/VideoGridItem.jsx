@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react";
 import FormatDurationVideo from "../utils/FormatDurationVideo";
 
 const VideoGridItem = ({
@@ -10,6 +11,21 @@ const VideoGridItem = ({
   thumbnailUrl,
   videoUrl,
 }) => {
+  // usestate to play video on hover
+  const [videoPlaying, setVideoPlaying] = useState(false);
+  const videoRef = useRef();
+
+  //   allow us to play the video on hover and reset the time when comes back on hover
+  useEffect(() => {
+    if (videoRef.current == null) return;
+    if (videoPlaying) {
+      videoRef.current.currentTime = 0;
+      videoRef.current.play();
+    } else {
+      videoRef.current.pause();
+    }
+  }, [videoPlaying]);
+
   // to format the duration of the videos cards
   const formattedDuration = FormatDurationVideo(duration);
 
@@ -19,7 +35,11 @@ const VideoGridItem = ({
   });
 
   return (
-    <div className="flex flex-col gap-2">
+    <div
+      className="flex flex-col gap-2"
+      onMouseEnter={() => setVideoPlaying(true)}
+      onMouseLeave={() => setVideoPlaying(false)}
+    >
       {/* the whole picture is an ancor to simulate a link to the real video */}
       <a href={`/watch?v=${id}`} className="relative aspect-video">
         <img
@@ -30,6 +50,15 @@ const VideoGridItem = ({
         <div className="absolute bottom-1 right-1 text-sm px-1 rounded text-secondary bg-secondary-dark">
           {formattedDuration}
         </div>
+        <video
+          className={`block h-full object-cover absolute inset-0 transition-opacity duration-300 ${
+            videoPlaying ? "opacity-100" : "opacity-0"
+          }`}
+          ref={videoRef}
+          muted
+          playsInline
+          src={videoUrl}
+        ></video>
       </a>
       {/* second div down with all the datas name title views released etc */}
       <div className="flex gap-2">
