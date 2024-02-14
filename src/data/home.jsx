@@ -4,7 +4,7 @@ export const filtersList = [
   "TailwindCSS",
   "NodeJS",
   "World of Warcraft",
-  "MT-10",
+  "Yamaha MT-10",
   "TypeScript",
   "Programming",
   "Coding",
