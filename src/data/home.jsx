@@ -13,7 +13,19 @@ export const filtersList = [
   "Deep learning",
   "Frontend",
   "Backend",
-  "Web Development",
+  "Express",
+  "Porsche",
+  "Nodemon",
+  "MongoDB",
+  "HTML5",
+  "CSS3",
+  "GitHUB",
+  "Xampp",
+  "Slack",
+  "Adobe Illustrator",
+  "Postman",
+  "Javascript",
+  "Figma",
 ];
 
 export const videos = [

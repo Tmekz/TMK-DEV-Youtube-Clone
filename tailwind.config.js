@@ -1,7 +1,6 @@
 // colors gives access to all the colors
 import colors from "tailwindcss/colors";
 
-
 // all the colors that we gonna use are now defined
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -20,5 +19,6 @@ export default {
       },
     },
   },
-  plugins: [],
+  // npm i tailwind-scrollbar-hide then add this part in the config to be able to hide scrollbar in classname="scrollbar-hide"
+  plugins: [require("tailwind-scrollbar-hide")],
 };
