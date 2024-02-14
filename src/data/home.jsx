@@ -32,7 +32,7 @@ import site1 from "../assets/Site1.jpg";
 import site2 from "../assets/Site2.jpg";
 import site3 from "../assets/Site3.jpg";
 import site4 from "../assets/Site4.jpg";
-import profile from "../assets/Profile.jpg";
+import profile from "../assets/Profile1.jpg";
 export const videos = [
   {
     id: "1",
@@ -111,7 +111,7 @@ export const videos = [
   },
   {
     id: "6",
-    title: "TMK-DEV no more title idea",
+    title: "TMK-DEV talking alone cause he has no workmates",
     channel: {
       name: "TMK-DEV Fullstack Junior",
       id: "TMK-DEV",
@@ -126,7 +126,7 @@ export const videos = [
   },
   {
     id: "7",
-    title: "TMK-DEV no more title idea",
+    title: "TMK-DEV Lord of the Rings FANBOY !!!!",
     channel: {
       name: "TMK-DEV Fullstack Junior",
       id: "TMK-DEV",
@@ -141,7 +141,7 @@ export const videos = [
   },
   {
     id: "8",
-    title: "TMK-DEV no more title idea",
+    title: "TMK-DEV hopes Dune 2 is good",
     channel: {
       name: "TMK-DEV Fullstack Junior",
       id: "TMK-DEV",
