@@ -1,25 +1,78 @@
-import { Bell, Menu, Mic, Search, Upload, User } from "lucide-react";
+import { ArrowLeft, Bell, Menu, Mic, Search, Upload, User } from "lucide-react";
 import logo from "../assets/Logo.svg";
 import Button from "./Button";
+import { useState } from "react";
 
 const Header = () => {
+  // to show the searchbar is fullwidth
+  const [showFullWidthSearch, setShowFullWidthSearch] = useState(false);
+
+  console.log(showFullWidthSearch);
   return (
-    <div className="flex  justify-between items-center mx-4 pt-2 mb-6">
+    <div className="flex gap-10 lg:gap-20 justify-between items-center mx-4 pt-2 mb-6">
       {/* First div with menu button + logo youtube */}
-      <div className="flex gap-4 shrink-0">
-        <Menu className="" />
+      <div
+        className={`flex gap-4 shrink-0 items-center ${
+          showFullWidthSearch ? "hidden" : "flex"
+        }`}
+      >
+        <Button variant="ghost" size="icon">
+          <Menu />
+        </Button>
         <a href={"/"}>
           <img src={logo} alt="Logo youtube" className="h-6" />
         </a>
       </div>
 
-      {/* Last divicons */}
-      <div className="flex shrink-0 md:gap-2 items-center  ">
-        <Button size="icon" variant="ghost" className="md:hidden">
+      {/* searchbar in between, smaller than md screen has to be hidden*/}
+      <form
+        className={`gap-4 flex-grow justify-center ${
+          showFullWidthSearch ? "flex" : "hidden md:flex"
+        }`}
+      >
+        {showFullWidthSearch && (
+          <Button
+            onClick={() => setShowFullWidthSearch(false)}
+            type="button"
+            size="icon"
+            variant="ghost"
+            className="flex-shrink-0"
+          >
+            <ArrowLeft />
+          </Button>
+        )}
+        <div className="flex-grow flex max-w-[600px]">
+          <input
+            type="search"
+            placeholder="Search"
+            className="border focus:border-blue-500 outline-none border-secondary-border rounded-l-full text-lg w-full py-1 px-4"
+          />
+          <Button className="py-2 px-4 rounded-r-full border-secondary-border border border-l-0 flex-shrink-0">
+            <Search />
+          </Button>
+        </div>
+
+        <Button type="button" size="icon" className="flex-shrink-0">
+          <Mic />
+        </Button>
+      </form>
+
+      {/* Last div with 3 icons md+ screen and 5 icons less than md screen. If search is clicked then the div has to be hidden */}
+      <div
+        className={`flex shrink-0 md:gap-2 items-center ${
+          showFullWidthSearch ? "hidden" : "flex"
+        } `}
+      >
+        <Button
+          onClick={() => setShowFullWidthSearch(true)}
+          size="icon"
+          variant="ghost"
+          className="md:hidden"
+        >
           <Search />
         </Button>
         <Button size="icon" variant="ghost" className="md:hidden">
-          <Mic />
+          <Mic className="md:hidden" />
         </Button>
         <Button size="icon" variant="ghost">
           <Upload />
