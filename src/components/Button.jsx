@@ -34,13 +34,14 @@ export const buttonStyles = cva(["transition-colors"], {
 
 const Button = ({ variant, size, className, ...props }) => {
   return (
-    <button>
+    <button
       {...props}
-      {/* twMerge allow us to use prestyled class + normal classname. Depends on
-      the order we can choose wich one overide the other one className */}
-      {twMerge(buttonStyles({ variant, size }), className)}
-    </button>
+      //   twMerge allow us to use prestyled class + normal classname. Depends on the order we can choose wich one overide the other one
+      className={twMerge(buttonStyles({ variant, size }), className)}
+    />
   );
 };
 
 export default Button;
+
+
