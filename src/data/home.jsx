@@ -32,11 +32,11 @@ import site1 from "../assets/Site1.jpg";
 import site2 from "../assets/Site2.jpg";
 import site3 from "../assets/Site3.jpg";
 import site4 from "../assets/Site4.jpg";
-import profile from "../assets/Profile.jpg"
+import profile from "../assets/Profile.jpg";
 export const videos = [
   {
     id: "1",
-    title: "CSS Anchor Is The Best New CSS Feature Since Flexbox",
+    title: "TMK-DEV looking for a nice stage",
     channel: {
       name: "TMK-DEV Fullstack Junior",
       id: "TMK-DEV",
@@ -51,12 +51,11 @@ export const videos = [
   },
   {
     id: "2",
-    title: "NEW Way To Create Variables In JavaScript",
+    title: "TMK-DEV trying to clone youtube",
     channel: {
       name: "TMK-DEV Fullstack Junior",
       id: "TMK-DEV",
-      profileUrl:
-        "https://yt3.ggpht.com/ytc/APkrFKZWeMCsx4Q9e_Hm6nhOOUQ3fv96QGUXiMr1-pPP=s48-c-k-c0x00ffffff-no-rj",
+      profileUrl: profile,
     },
     views: 257136,
     postedAt: new Date("2023-08-22"),
@@ -67,12 +66,11 @@ export const videos = [
   },
   {
     id: "3",
-    title: "Front-end developer takes on a CSS battle",
+    title: "TMK-DEV that has no idea what title to give",
     channel: {
       name: "TMK-DEV Fullstack Junior",
       id: "TMK-DEV",
-      profileUrl:
-        "https://yt3.ggpht.com/ytc/APkrFKa6XiLa13mMVPzkmmTBcgNPjjqCGPrY86KfJFmf5w=s48-c-k-c0x00ffffff-no-rj",
+      profileUrl: profile,
     },
     views: 1232300,
     postedAt: new Date("2023-10-05"),
@@ -83,12 +81,11 @@ export const videos = [
   },
   {
     id: "4",
-    title: "Quick guide to CSS focus states",
+    title: "TMK-DEV hoping the code is not spaghetti",
     channel: {
       name: "TMK-DEV Fullstack Junior",
       id: "TMK-DEV",
-      profileUrl:
-        "https://yt3.ggpht.com/ytc/APkrFKa6XiLa13mMVPzkmmTBcgNPjjqCGPrY86KfJFmf5w=s48-c-k-c0x00ffffff-no-rj",
+      profileUrl: profile,
     },
     views: 112,
     postedAt: new Date("2023-9-19"),
@@ -99,12 +96,11 @@ export const videos = [
   },
   {
     id: "5",
-    title: "I Cannot Believe React Made A Hook For This",
+    title: "TMK-DEV really want to find a stage",
     channel: {
       name: "TMK-DEV Fullstack Junior",
       id: "TMK-DEV",
-      profileUrl:
-        "https://yt3.ggpht.com/ytc/APkrFKZWeMCsx4Q9e_Hm6nhOOUQ3fv96QGUXiMr1-pPP=s48-c-k-c0x00ffffff-no-rj",
+      profileUrl: profile,
     },
     views: 42345,
     postedAt: new Date("2023-03-02"),
@@ -115,12 +111,11 @@ export const videos = [
   },
   {
     id: "6",
-    title: "I Got Laid Off...",
+    title: "TMK-DEV no more title idea",
     channel: {
       name: "TMK-DEV Fullstack Junior",
       id: "TMK-DEV",
-      profileUrl:
-        "https://yt3.googleusercontent.com/ytc/APkrFKbpSojje_-tkBQecNtFuPdSCrg3ZT0FhaYjln9k0g=s176-c-k-c0x00ffffff-no-rj",
+      profileUrl: profile,
     },
     views: 10340,
     postedAt: new Date("2023-03-03"),
@@ -131,12 +126,11 @@ export const videos = [
   },
   {
     id: "7",
-    title: "Tails OS in 100 Seconds",
+    title: "TMK-DEV no more title idea",
     channel: {
       name: "TMK-DEV Fullstack Junior",
       id: "TMK-DEV",
-      profileUrl:
-        "https://yt3.googleusercontent.com/ytc/APkrFKb--NH6RwAGHYsD3KfxX-SAgWgIHrjR5E4Jb5SDSQ=s176-c-k-c0x00ffffff-no-rj",
+      profileUrl: profile,
     },
     views: 10323340,
     postedAt: new Date("2023-08-09"),
@@ -147,12 +141,11 @@ export const videos = [
   },
   {
     id: "8",
-    title: "Zig in 100 Seconds",
+    title: "TMK-DEV no more title idea",
     channel: {
       name: "TMK-DEV Fullstack Junior",
       id: "TMK-DEV",
-      profileUrl:
-        "https://yt3.googleusercontent.com/ytc/APkrFKb--NH6RwAGHYsD3KfxX-SAgWgIHrjR5E4Jb5SDSQ=s176-c-k-c0x00ffffff-no-rj",
+      profileUrl: profile,
     },
     views: 20323340,
     postedAt: new Date("2023-09-09"),
