@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import FeedFilters from "./components/FeedFilters";
 import { filtersList, videos } from "./data/home";
 import VideoGridItem from "./components/VideoGridItem";
+import Sidebar from "./components/Sidebar";
 
 const App = () => {
   // we need a usestate to change the color of the filtersCategories that has been selected ISACTIVE
@@ -16,7 +17,7 @@ const App = () => {
       {/* We want the sidebar on the left to have a auto-size and the second colon on the right to take the full width available */}
       <div className="grid grid-cols-[auto,1fr] flex-grow overflow-auto">
         {/* sidebar on the left */}
-        <div className="w-24  bg-cyan-500 text-center">SIDEBAR</div>
+        <Sidebar />
 
         {/* maindiv on the right with cards*/}
         <div className="overflow-x-hidden  px-8 pb-4">

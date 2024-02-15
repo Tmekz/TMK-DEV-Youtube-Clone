@@ -29,10 +29,10 @@ const VideoGridItem = ({
   // to format the duration of the videos cards
   const formattedDuration = FormatDurationVideo(duration);
 
-  // to format the views with "K" ex:"220k"
-  const VIEW_FORMATTER = new Intl.NumberFormat({
-    notation: "compact",
-  });
+  // to format the views with "K" ex:"220k" or "1.2M". Using the object Intl.NumberFormat with undefined to let the settings on the browser to choose th
+ const VIEW_FORMATTER = new Intl.NumberFormat(undefined, {
+   notation: "compact",
+ });
 
   return (
     <div
@@ -51,8 +51,8 @@ const VideoGridItem = ({
           {formattedDuration}
         </div>
         <video
-          className={`block h-full object-cover absolute inset-0 transition-opacity duration-300 ${
-            videoPlaying ? "opacity-100" : "opacity-0"
+          className={`block h-full object-cover absolute inset-0 transition-opacity duration-200  ${
+            videoPlaying ? "opacity-100 delay-200" : "opacity-0"
           }`}
           ref={videoRef}
           muted
