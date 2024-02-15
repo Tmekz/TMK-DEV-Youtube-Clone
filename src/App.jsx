@@ -14,6 +14,7 @@ const App = () => {
   return (
     <div className="flex flex-col max-h-screen">
       <Header />
+      
       {/* We want the sidebar on the left to have a auto-size and the second colon on the right to take the full width available */}
       <div className="grid grid-cols-[auto,1fr] flex-grow overflow-auto">
         {/* sidebar on the left */}
