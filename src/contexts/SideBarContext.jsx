@@ -1,5 +1,8 @@
 import React, { createContext, useState, useContext } from "react";
 
+// Custom hook to consume the context
+export const useSidebarContext = () => useContext(SidebarContext);
+
 // Step 1: Create a Context
 const SidebarContext = createContext();
 
@@ -19,8 +22,5 @@ const SidebarProvider = ({ children }) => {
     </SidebarContext.Provider>
   );
 };
-
-// Custom hook to consume the context
-export const useSidebar = () => useContext(SidebarContext);
 
 export default SidebarProvider;

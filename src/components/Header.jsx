@@ -1,18 +1,16 @@
 import { ArrowLeft, Bell, Menu, Mic, Search, Upload, User } from "lucide-react";
 import logo from "../assets/Logo.svg";
 import Button from "./Button";
-import { useState } from "react";
-import { useSidebar } from "../contexts/SideBarContext";
+import { useContext, useState } from "react";
+import { useSidebarContext } from "../contexts/SideBarContext";
 
 const Header = () => {
-  // to show the searchbar is fullwidth
+  // to show the searchbar in fullwidth
   const [showFullWidthSearch, setShowFullWidthSearch] = useState(false);
 
   // Allow us to consume the usecontext
-  const { toggleSidebar, isSidebarOpen } = useSidebar();
-
-  console.log(isSidebarOpen);
-  
+  const { toggleSidebar, isSidebarOpen } = useSidebarContext();
+  // console.log(isSidebarOpen);
 
   return (
     <div className="flex gap-10 lg:gap-20 justify-between items-center mx-4 pt-2 mb-6">

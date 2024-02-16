@@ -32,6 +32,10 @@ import site1 from "../assets/Site1.jpg";
 import site2 from "../assets/Site2.jpg";
 import site3 from "../assets/Site3.jpg";
 import site4 from "../assets/Site4.jpg";
+import site5 from "../assets/Site5.jpg";
+import site8 from "../assets/Site6.jpg";
+import site7 from "../assets/Site7.jpg";
+import site6 from "../assets/Site8.jpg";
 import profile from "../assets/Profile1.jpg";
 export const videos = [
   {
@@ -105,7 +109,7 @@ export const videos = [
     views: 58985,
     postedAt: new Date("2023-03-02"),
     duration: 1000,
-    thumbnailUrl: site1,
+    thumbnailUrl: site5,
     videoUrl:
       "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
   },
@@ -120,7 +124,7 @@ export const videos = [
     views: 999852,
     postedAt: new Date("2023-03-03"),
     duration: 54,
-    thumbnailUrl: site2,
+    thumbnailUrl: site6,
     videoUrl:
       "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
   },
@@ -135,7 +139,7 @@ export const videos = [
     views: 1654235,
     postedAt: new Date("2023-08-09"),
     duration: 100,
-    thumbnailUrl: site3,
+    thumbnailUrl: site7,
     videoUrl:
       "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
   },
@@ -150,7 +154,7 @@ export const videos = [
     views: 24,
     postedAt: new Date("2023-09-09"),
     duration: 105,
-    thumbnailUrl: site4,
+    thumbnailUrl: site8,
     videoUrl:
       "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
   },
