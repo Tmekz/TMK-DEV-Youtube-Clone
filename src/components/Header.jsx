@@ -2,10 +2,17 @@ import { ArrowLeft, Bell, Menu, Mic, Search, Upload, User } from "lucide-react";
 import logo from "../assets/Logo.svg";
 import Button from "./Button";
 import { useState } from "react";
+import { useSidebar } from "../contexts/SideBarContext";
 
 const Header = () => {
   // to show the searchbar is fullwidth
   const [showFullWidthSearch, setShowFullWidthSearch] = useState(false);
+
+  // Allow us to consume the usecontext
+  const { toggleSidebar, isSidebarOpen } = useSidebar();
+
+  console.log(isSidebarOpen);
+  
 
   return (
     <div className="flex gap-10 lg:gap-20 justify-between items-center mx-4 pt-2 mb-6">
@@ -15,10 +22,10 @@ const Header = () => {
           showFullWidthSearch ? "hidden" : "flex"
         }`}
       >
-        <Button variant="ghost" size="icon">
+        <Button onClick={toggleSidebar} variant="ghost" size="icon">
           <Menu />
         </Button>
-        
+
         <a href={"/"}>
           <img src={logo} alt="Logo youtube" className="h-6" />
         </a>

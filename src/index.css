@@ -9,7 +9,8 @@
   scrollbar-width: thin;
 }
 
-*::-webkit-scrollbar {
+/* trying to change the style of the scrollbar */
+/* *::-webkit-scrollbar {
   @apply bg-transparent w-2;
 }
 
@@ -23,4 +24,4 @@
 
 .scrollbar-hidden:hover::-webkit-scrollbar-thumb {
   @apply bg-secondary-border;
-}
+} */
